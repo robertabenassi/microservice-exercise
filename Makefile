@@ -11,7 +11,7 @@ test:               ## Testing
 
 #####################################
 #
-# GO 
+# DOCKER COMPOSE
 #
 #####################################
 build:              ## builds portAPI and portDomainService
@@ -25,7 +25,7 @@ up:                 ## creates all containers needed by the environment
 # MICROSERVICE  UPLOAD 
 #
 #####################################
-upload:         ## Example usage: make load-ports file=myports.json, by default it reads the testdata/ports.json file
+upload:         ## Usage: make load-ports file=myports.json, by default it reads the testdata/ports.json file when a file option is not given
 	@if [ "$(file)" = "" ]; then \
 		curl -F file=@testdata/ports.json 'http://127.0.0.1:8000/updatePorts'; \
 	else \
