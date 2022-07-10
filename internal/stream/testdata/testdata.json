@@ -1,0 +1,18 @@
+{
+    "ZABFN": {
+        "name": "Bloemfontein",
+        "city": "Bloemfontein",
+        "country": "South Africa",
+        "alias": [],
+        "regions": [],
+        "coordinates": [
+            26.1595761,
+            -29.085214
+        ],
+        "province": "Free State",
+        "timezone": "Africa/Johannesburg",
+        "unlocs": [
+            "ZABFN"
+        ]
+    }
+}
