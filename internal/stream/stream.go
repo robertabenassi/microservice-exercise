@@ -13,6 +13,12 @@ import (
 	"os"
 )
 
+// StreamService is an interface for loading PortItem as a JSON stream file
+type StreamService interface {
+	Load(path string)
+	Watch() <-chan data_model.PortItem
+}
+
 // Stream represents a JSON stream, from which we read a file which can be a very big file.
 // The stream is related to the data_model we have to handle, which main entity is the PortItem
 type Stream struct {
