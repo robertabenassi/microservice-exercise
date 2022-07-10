@@ -1,6 +1,6 @@
 syntax = "proto3";
 package transport;
-option go_package = "internal/transport";
+option go_package = "microservice-exercise/internal/transport";
 import "ports.proto";
 
 service PortService {
