@@ -14,6 +14,11 @@ import (
 	"microservice-exercise/internal/data_model"
 )
 
+// DatabaseService is a interface for the database, i.e. where the data are stored
+type DatabaseService interface {
+	UpdatePort(string, data_model.Port) error
+}
+
 type portDB struct {
 	ID   string          `bson:"_id"`
 	Port data_model.Port `bson:"port"`
