@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  port-api:
+    build:
+      context: .
+      target: portAPI
+    ports:
+      - "8000:5000"
+    depends_on:
+      - port-domain-service
+    container_name: portapi_exercise
+  port-domain-service:
+    build:
+      context: .
+      target: portDomainService
+    ports:
+      - "8001:5000"
+    container_name: portdomainservice_exercise
+  mongodb:
+      image: mongo:5.0
+      ports:
+        - 27017:27017
+      container_name: mongodb_exercise
