@@ -36,6 +36,19 @@ It is a very basic documentation!
 ## Protobuf generation
 A Makefile is available on the folder proto, just to make easier the generation of protobuf go files.
 
+## Docker commands
+In order to tear up the whole environment, you should firstly type
+
+```
+@docker-compose build --no-cache
+```
+to get the go microservices compiled/built
+Secondly, to get all container working
+
+```
+@docker-compose up --force-recreate
+```
+
 
 
 
