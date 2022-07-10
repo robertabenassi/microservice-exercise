@@ -26,6 +26,16 @@ As far as microservices are concerned, I am supposing that the main communicatio
 - protobuf 
 - protoc-gen-go 
 - protoc-gen-go-grpc 
+(I had a bit of trouble on windows, things should go smoothier on Linux!)
+
+
+## Useful commands on docker and utilities
+In order to operate on microservices, I will put in a makefile the common used commands.
+It is a very basic documentation!
+
+## Protobuf generation
+A Makefile is available on the folder proto, just to make easier the generation of protobuf go files.
+
 
 
 
