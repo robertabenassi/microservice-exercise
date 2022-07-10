@@ -48,6 +48,17 @@ Secondly, to get all container working you have to type
 ```
 @docker-compose up --force-recreate
 ```
+Those commands have been added to the makefile, so you can replace the above commands with a simplier 
+
+
+```
+make build
+```
+
+```
+make up
+```
+
 # Go Microservice Package Organization
 The data structure of the module relies on a 
 - proto folder in which the .proto files of the entities and operations for the entity "port" are described
@@ -61,13 +72,32 @@ I did not rely on go-micro or go-kit directly, but if I can say something it is 
 - microservice-exercise/internal/http_handlers handles a web server for the portAPI service.
 - microservice-exercise/internal/transport is a middleware package directly created by compiling proto files
 
-## Test
+# How to test
+To check if everything is working, please follows those instructions
+
+```
+make build
+```
+```
+make up
+```
+```
+make upload
+```
+When connecting to the mongo db instance, you can type the command listed in the picture to see whether the data have been uploaded
+![check_execution](doc/images/port_in_db.png)
+
+## Unit tests
 Some basic unit tests are provided for the stream package (intended to read a big-sized json file into a stream).
 Those test simply verify that the system is intended to parse a well-known format
 
 Other unit tests has been settled down for the rest api used by portAPI.
 
-Additional test should be added to handle the interaction with the database instance. Unfortunately I had no time to explore about that
+Additional test should be added to handle the interaction with the database instance. Unfortunately I had no time to explore about that.
+
+## E2E Test
+I did not have time to think about a suite of e2e test, basically I wanted to add an api to retrieve by ID what it has been inserted. 
+
 
 
 
