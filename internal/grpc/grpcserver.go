@@ -56,7 +56,6 @@ func (s *PortsProtocolServer) GracefulStop() error {
 	log.Info("Stopping gRPC done!")
 	log.Info("Please wait while stopping server listener...")
 	return s.listener.Close()
-	log.Info("Stopping server listener done!")
 }
 
 // Serve serves the grpc server
