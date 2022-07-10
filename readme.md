@@ -98,6 +98,13 @@ Additional test should be added to handle the interaction with the database inst
 ## E2E Test
 I did not have time to think about a suite of e2e test, basically I wanted to add an api to retrieve by ID what it has been inserted. 
 
+# Functional notes
+It would be nice to enrich the data structure of the Port entity with a last updated field, this will help in defining (in a human readable form and to be exposed through apis) when the record has been updated (more interesting having a first inserted and last updated field)
+
+# Linting and static code check
+To be added.
+
+
 
 
 
