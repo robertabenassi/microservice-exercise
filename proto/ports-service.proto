@@ -1,0 +1,8 @@
+syntax = "proto3";
+package transport;
+option go_package = "";
+import "ports.proto";
+
+service PortService {
+  rpc UpdatePort(ports.UpdatePortRequest) returns (ports.UpdatePortResponse) {}
+}

@@ -15,8 +15,9 @@ message Port {
     string code = 10;
 }
 
-
 message UpdatePortRequest {
     string key = 1;
     Port port = 2;
 }
+
+message UpdatePortResponse {}
