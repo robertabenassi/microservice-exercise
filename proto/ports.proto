@@ -1,6 +1,6 @@
 syntax = "proto3";
 package ports;
-option go_package = "internal/domain";
+option go_package = "internal/data_model";
 
 message Port {
     string name = 1;
